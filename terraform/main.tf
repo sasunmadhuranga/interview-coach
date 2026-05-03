@@ -77,7 +77,7 @@ resource "aws_ecs_task_definition" "backend" {
       { name = "DYNAMODB_REGION",    value = "us-east-1" },
       { name = "USERS_TABLE",        value = aws_dynamodb_table.users.name },
       { name = "SESSIONS_TABLE",     value = aws_dynamodb_table.sessions.name },
-      { name = "FRONTEND_URL",    value = "http://${aws_s3_bucket_website_configuration.frontend.website_endpoint}" }
+      { name = "FRONTEND_URL", value = "https://interview-coach-92jd.vercel.app" }
     ]
 
     logConfiguration = {
