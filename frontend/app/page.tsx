@@ -1,4 +1,3 @@
-//frontend/app/page.tsx
 "use client"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
@@ -15,7 +14,6 @@ export default function Home() {
       bg-gradient-to-br from-gray-100 via-white to-gray-200
       dark:from-gray-900 dark:via-black dark:to-gray-950">
 
-      {/* MODALS (✅ MUST BE INSIDE RETURN) */}
       {activeModal === "login" && (
         <Login
           onClose={() => setActiveModal(null)}
@@ -30,11 +28,9 @@ export default function Home() {
         />
       )}
 
-      {/* 🔵 Background Glow */}
       <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-blue-500/30 rounded-full blur-3xl" />
       <div className="absolute bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-purple-500/30 rounded-full blur-3xl" />
 
-      {/* 🧠 Content */}
       <div className="text-center max-w-2xl z-10">
 
         <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight
@@ -46,7 +42,6 @@ export default function Home() {
           Practice with AI, get real feedback, and track your improvement like a pro.
         </p>
 
-        {/* CTA Buttons */}
         <div className="flex gap-4 justify-center mb-12">
 
           <button
@@ -69,7 +64,6 @@ export default function Home() {
 
         </div>
 
-        {/* 📊 Feature Preview Card */}
         <div className="backdrop-blur-lg bg-white/70 dark:bg-white/5 
           border border-gray-200 dark:border-gray-800 
           shadow-xl rounded-2xl p-6 text-left">

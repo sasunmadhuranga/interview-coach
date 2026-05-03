@@ -433,7 +433,7 @@ resource "aws_s3_bucket_policy" "frontend" {
   })
 }
 
-# ─── IAM role so Jenkins EC2 can call AWS without storing keys ───────────────
+# ─── IAM role so Jenkins EC2 can call AWS without storing keys 
 resource "aws_iam_role" "jenkins" {
   name = "jenkins-ec2-role"
 
@@ -523,7 +523,7 @@ resource "aws_security_group" "jenkins_sg" {
   tags = { Name = "jenkins-sg", Project = var.project }
 }
 
-# ─── EC2 instance — t3.small is the sweet spot for Jenkins ───────────────────
+# ─── EC2 instance — t3.small is the sweet spot for Jenkins 
 resource "aws_instance" "jenkins" {
   ami                    = "ami-0453ec754f44f9a4a"  # Amazon Linux 2023, us-east-1
   instance_type          = "t3.small"
