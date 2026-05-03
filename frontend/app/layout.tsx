@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flight Deals App",
-  description: "Compare and book cheapest flights worldwide",
+  title: "Interview Coach",
+  description: "An AI-powered interview preparation tool that provides personalized feedback and practice questions to help you ace your next job interview.",
 };
 
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""; 
