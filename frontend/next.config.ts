@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://interview-alb-1315898996.us-east-1.elb.amazonaws.com/api/:path*',
+        destination: `${process.env.API_BASE_URL}/api/:path*`,
       },
     ]
   },
