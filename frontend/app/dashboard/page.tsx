@@ -59,7 +59,7 @@ export default function Dashboard() {
     )
   }
 
-  if (!API_URL) {
+  if (!API) {
     throw new Error("NEXT_PUBLIC_API_BASE_URL is not defined");
   }
 
