@@ -1,0 +1,10 @@
+import "express"
+
+declare module "express" {
+  export interface Request {
+    user?: {
+      email: string
+      tokenVersion?: number
+    }
+  }
+}

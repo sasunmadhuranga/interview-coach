@@ -1,0 +1,6 @@
+groq_api_key   = "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"
+jwt_secret     = "a;lafodfeoASjs1234ofdofjdof3@a##$sssdddddddaaawqq!ssssddfd"
+my_ip = "111.223.189.92"
+key_pair_name  = "interview-coach"       
+resend_api_key = "re_MMxGx6xZ_NVK45iBBgZX1LFkf7E1PqyYN"
+project       = "interview-coach"

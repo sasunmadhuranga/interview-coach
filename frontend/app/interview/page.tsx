@@ -1,0 +1,12 @@
+// frontend/app/interview/page.tsx
+
+import { Suspense } from "react"
+import InterviewClient from "./InterviewClient"
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading interview...</div>}>
+      <InterviewClient />
+    </Suspense>
+  )
+}

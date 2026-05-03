@@ -1,0 +1,1 @@
+630596767614.dkr.ecr.us-east-1.amazonaws.com/interview-coach-backend
