@@ -536,7 +536,7 @@ resource "aws_instance" "jenkins" {
     #!/bin/bash
     set -e
     dnf update -y
-    dnf install -y unzip tar curl wget java-17-amazon-corretto docker
+    dnf install -y unzip tar curl wget java-21-amazon-corretto docker
 
     # Jenkins
     wget -O /etc/yum.repos.d/jenkins.repo \

@@ -50,7 +50,7 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                  href="/profile"
+                  href=""
                   className="text-gray-700 dark:text-gray-300 
                   hover:text-black dark:hover:text-white"
                 >
