@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { GoogleLogin } from '@react-oauth/google';
 import { useRouter } from "next/navigation";
+
 type SignUpProps = {
   onClose: () => void;
   onSwitchToLogin: () => void;
