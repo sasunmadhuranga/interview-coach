@@ -1,4 +1,3 @@
-// backend/services/aiService.ts
 import OpenAI from "openai"
 
 const client = new OpenAI({
@@ -12,7 +11,6 @@ const MODELS = [
   "qwen/qwen3-32b"
 ]
 
-// ---------- CORE CALL (with fallback) ----------
 const callModel = async (
   prompt: string,
   json = false
@@ -36,7 +34,6 @@ const callModel = async (
   return null
 }
 
-// ---------- QUESTION ----------
 export const generateQuestionAI = async (role: string) => {
   const prompt = `
     You are a senior ${role} interviewer.
@@ -57,7 +54,6 @@ export const generateQuestionAI = async (role: string) => {
   )
 }
 
-// ---------- EVALUATION ----------
 export const evaluateAnswerAI = async (
   question: string,
   answer: string,

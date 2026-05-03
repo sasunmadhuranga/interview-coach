@@ -1,4 +1,3 @@
-// backend/lib/sessionRepo.ts
 import { dynamo } from "./dynamodb.js"
 import { PutCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb"
 import type { AnswerEntry } from "../types/interview.js";

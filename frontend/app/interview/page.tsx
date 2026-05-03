@@ -1,5 +1,3 @@
-// frontend/app/interview/page.tsx
-
 import { Suspense } from "react"
 import InterviewClient from "./InterviewClient"
 

@@ -85,7 +85,7 @@ export default function SignUp({ onClose, onSwitchToLogin }: SignUpProps) {
   };
 
   const handleGoogleSuccess = async (response: any) => {
-    const googleToken = response.credential; // Get the token
+    const googleToken = response.credential;
 
     try {
       const res = await axios.post(

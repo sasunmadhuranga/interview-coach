@@ -14,7 +14,6 @@ import interviewRoutes from "./routes/interviewRoutes.js"
 
 const app = express();
 
-/* ---------- SECURITY ---------- */
 app.disable("x-powered-by");
 
 const allowedOrigins = [
@@ -54,7 +53,6 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-/* ---------- ROUTES ---------- */
 app.get('/health', (req, res) => res.status(200).json({ status: 'ok' }))
 app.use("/api/users", userRoutes);
 app.use("/api/interview", interviewRoutes)
@@ -63,7 +61,6 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 
-/* ---------- ERROR HANDLER ---------- */
 const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: "Something went wrong" });
@@ -71,8 +68,6 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
 
 app.use(errorHandler);
 
-
-/* ---------- START SERVER ---------- */
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

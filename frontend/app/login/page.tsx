@@ -1,4 +1,3 @@
-//frontend/app/login/page.tsx
 "use client";
 
 import Login from "@/app/components/Login";

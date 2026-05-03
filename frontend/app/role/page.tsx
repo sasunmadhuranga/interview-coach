@@ -1,4 +1,3 @@
-//frontend/app/role/page.tsx
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -45,7 +44,6 @@ export default function RolePage() {
                 hover:shadow-lg transition-all duration-200
                 hover:scale-[1.03] active:scale-95"
               >
-                {/* Glow effect */}
                 <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition
                   bg-gradient-to-r from-blue-500/10 to-indigo-500/10" />
 

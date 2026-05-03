@@ -32,7 +32,6 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
       new TextEncoder().encode(JWT_SECRET)
     );
 
-    // ✅ runtime validation (IMPORTANT)
     if (
       typeof payload.email !== "string" ||
       typeof payload.tokenVersion !== "number"

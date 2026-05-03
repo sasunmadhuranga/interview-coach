@@ -1,4 +1,3 @@
-//frontend/app/interview/InterviewClient.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -106,10 +105,9 @@ export default function InterviewClient() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-black flex justify-center px-4 py-10">
-      {/* MAIN CARD */}
+
       <div className="w-full max-w-3xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-gray-800 rounded-2xl shadow-xl flex flex-col">
 
-        {/* HEADER */}
         <div className="p-5 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
           <div>
             <h1 className="font-bold text-lg text-gray-800 dark:text-gray-200">
@@ -125,7 +123,6 @@ export default function InterviewClient() {
           )}
         </div>
 
-        {/* CHAT AREA */}
         <div className="flex-1 p-5 space-y-4 overflow-y-auto max-h-[60vh]">
           {history.map((item, i) => (
             <div
@@ -149,7 +146,6 @@ export default function InterviewClient() {
           ))}
         </div>
 
-        {/* INPUT AREA */}
         <div className="p-4 border-t border-gray-200 dark:border-gray-800">
           <textarea
             className="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"

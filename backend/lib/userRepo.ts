@@ -1,4 +1,3 @@
-//backend/lib/userRepo.ts
 import { dynamo } from "./dynamodb.js";
 import {
   PutCommand,
@@ -8,7 +7,6 @@ import {
 
 const TABLE = "Users";
 
-/* ---------- CREATE USER ---------- */
 export async function createUser(user: any) {
   await dynamo.send(
     new PutCommand({
@@ -19,7 +17,6 @@ export async function createUser(user: any) {
   );
 }
 
-/* ---------- FIND USER ---------- */
 export async function findUserByEmail(email: string) {
   const res = await dynamo.send(
     new GetCommand({
@@ -30,7 +27,6 @@ export async function findUserByEmail(email: string) {
   return res.Item;
 }
 
-/* ---------- UPDATE USER ---------- */
 export async function updateUser(email: string, updates: any) {
   const updateExpression =
     "set " +

@@ -1,4 +1,3 @@
-//backend/controllers/resetPasswordController.ts
 import type { Request, Response } from "express";
 import crypto from "crypto";
 import bcrypt from "bcryptjs";
@@ -80,7 +79,6 @@ export const forgotPassword = async (req: Request, res: Response) => {
 
     const user = await findUserByEmail(normalizedEmail);
 
-    // always same response (security)
     if (!user) {
       await delay(300);
       return res.json({

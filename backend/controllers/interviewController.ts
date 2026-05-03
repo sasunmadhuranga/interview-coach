@@ -1,4 +1,3 @@
-//backend/controllers/interviewController.ts
 import type { Request, Response } from "express"
 import { startInterview, processAnswer } from "../services/interviewService.js"
 import { QueryCommand } from "@aws-sdk/lib-dynamodb"
@@ -6,7 +5,6 @@ import { dynamo } from "../lib/dynamodb.js"
 import { createSession } from "../lib/sessionRepo.js"
 import { generateQuestionAI } from "../services/aiService.js"
 
-/* ---------- START SESSION ---------- */
 export const startSession = async (req: Request, res: Response) => {
   try {
     const userId = req.user!.email
@@ -30,7 +28,6 @@ export const getQuestion = async (req: Request, res: Response) => {
   try {
     const { role } = req.body
 
-    // TEMP: simple mock (replace with LLM later)
     const questions: any = {
       DevOps: "Explain CI/CD pipeline.",
       Cloud: "What is AWS Lambda?",
@@ -48,7 +45,6 @@ export const getQuestion = async (req: Request, res: Response) => {
   }
 }
 
-/* ---------- ANSWER QUESTION ---------- */
 export const answerQuestion = async (req: Request, res: Response) => {
   try {
     const userId = req.user!.email
@@ -64,7 +60,7 @@ export const answerQuestion = async (req: Request, res: Response) => {
 
     res.json({
       ...data,
-      sessionId // ✅ FIXED: return the same sessionId
+      sessionId 
     })
   } catch (err) {
     console.error(err)
@@ -72,7 +68,6 @@ export const answerQuestion = async (req: Request, res: Response) => {
   }
 }
 
-/* ---------- GET SESSIONS ---------- */
 export const getSessions = async (req: Request, res: Response) => {
   try {
     const userId = req.user!.email

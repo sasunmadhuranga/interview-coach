@@ -1,4 +1,3 @@
-// backend/src/routes/userRoutes.ts
 import express from "express";
 import { signup, login, googleAuth, getMe } from "../controllers/userController.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";

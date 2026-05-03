@@ -28,8 +28,7 @@ export default function ResetPassword() {
       });
 
       setMessage(res.data.message);
-
-      // redirect AFTER success
+      
       setTimeout(() => {
         router.push("/login");
       }, 1000);

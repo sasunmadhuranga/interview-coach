@@ -20,6 +20,5 @@ export async function getSession(
   userId: string,
   sessionId: string
 ): Promise<InterviewSession | null> {
-  // TODO: your logic here
   return null;
 }

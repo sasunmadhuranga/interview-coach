@@ -1,4 +1,3 @@
-//frontend/app/dashboard/page.tsx
 "use client"
 
 import { useEffect, useState } from "react"
@@ -73,7 +72,6 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
 
-      {/* Sessions */}
       <div className="p-5 rounded-2xl bg-white dark:bg-gray-900
         border border-gray-200 dark:border-gray-800 shadow-sm">
 
@@ -86,7 +84,6 @@ export default function Dashboard() {
         </p>
       </div>
 
-      {/* Avg Score */}
       <div className="p-5 rounded-2xl bg-white dark:bg-gray-900
         border border-gray-200 dark:border-gray-800 shadow-sm">
 
@@ -99,7 +96,6 @@ export default function Dashboard() {
         </p>
       </div>
 
-      {/* Optional: Performance Badge */}
       <div className="p-5 rounded-2xl bg-white dark:bg-gray-900
         border border-gray-200 dark:border-gray-800 shadow-sm">
 
@@ -114,7 +110,6 @@ export default function Dashboard() {
 
     </div>
 
-      {/* Sessions */}
       <div className="space-y-4">
 
         {sessions.map((s) => {
@@ -128,7 +123,6 @@ export default function Dashboard() {
               rounded-2xl shadow-sm"
             >
 
-              {/* HEADER */}
               <div
                 onClick={() =>
                   setOpenSession(isOpen ? null : s.sessionId)
@@ -150,7 +144,6 @@ export default function Dashboard() {
                 </span>
               </div>
 
-              {/* DETAILS */}
               {isOpen && (
                 <div className="border-t border-gray-200 dark:border-gray-800 p-5 space-y-4">
 
@@ -164,12 +157,10 @@ export default function Dashboard() {
                         className="p-4 rounded-xl border border-gray-200 dark:border-gray-800"
                       >
 
-                        {/* Question */}
                         <p className="font-medium text-gray-900 dark:text-white">
                           Q: {q.question}
                         </p>
 
-                        {/* Toggle button */}
                         <button
                           onClick={() => toggleAnswer(key)}
                           className="mt-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
@@ -177,7 +168,6 @@ export default function Dashboard() {
                           {show ? "Hide Answer" : "Show Answer"}
                         </button>
 
-                        {/* Answer */}
                         {show && q.answer && (
                           <div className="mt-3 p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
                             <span className="font-semibold">Your Answer:</span>{" "}
@@ -185,7 +175,6 @@ export default function Dashboard() {
                           </div>
                         )}
 
-                        {/* Score */}
                         <div className="flex items-center gap-2 mt-3">
                           <span className="text-xs px-2 py-1 rounded bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300">
                             {q.score}/10
@@ -199,7 +188,6 @@ export default function Dashboard() {
                           </div>
                         </div>
 
-                        {/* Feedback */}
                         {q.feedback && (
                           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                             {q.feedback}

@@ -1,4 +1,3 @@
-//backend/services/interviewService.ts
 import { createSession, addAnswer, getSession, completeSession, updateTopicStats } from "../lib/sessionRepo.js"
 import { generateQuestionAI, evaluateAnswerAI } from "./aiService.js"
 

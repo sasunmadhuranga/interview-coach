@@ -1,4 +1,3 @@
-// frontend/components/Navbar.tsx
 "use client"
 
 import Link from "next/link"
@@ -11,7 +10,6 @@ export default function Navbar() {
   const { user, logout, loading } = useUser()
   const [activeModal, setActiveModal] = useState<"login" | "signup" | null>(null)
 
-  // Prevent background scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = activeModal ? "hidden" : "auto"
   }, [activeModal])
@@ -90,7 +88,6 @@ export default function Navbar() {
           </div>
         </nav>
 
-      {/* Modals */}
       {activeModal === "login" && (
         <Login
           onClose={() => setActiveModal(null)}
