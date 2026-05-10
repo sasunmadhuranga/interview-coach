@@ -193,5 +193,6 @@ Secrets must be manually created in SSM before deploying ECS tasks.
 
 ## Author
 Sasun Madhuranga
+
 GitHub: https://github.com/sasunmadhuranga
 
