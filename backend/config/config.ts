@@ -10,7 +10,7 @@ const getEnv = (key: string): string => {
 export const JWT_SECRET    = getEnv("JWT_SECRET");
 export const JWT_EXPIRES_IN = getEnv("JWT_EXPIRES_IN");
 
-export const CLIENT_URL = getEnv("FRONTEND_URL");
+export const CLIENT_URL = getEnv("ClIENT_URL");
 export const PORT       = getEnv("PORT");
 
 export const RESEND_API_KEY = getEnv("RESEND_API_KEY");

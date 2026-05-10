@@ -30,6 +30,7 @@ resource "aws_subnet" "private_b" {
 
 resource "aws_ecr_repository" "backend" {
   name = "interview-coach-backend"
+  force_delete = true
 }
 
 resource "aws_ecs_cluster" "main" {
