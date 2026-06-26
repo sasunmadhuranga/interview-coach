@@ -139,6 +139,7 @@ cd infrastructure
 terraform init
 terraform plan
 terraform apply
+
 ```
 
 Secrets must be manually created in SSM before deploying ECS tasks.
