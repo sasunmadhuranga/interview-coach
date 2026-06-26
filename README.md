@@ -32,30 +32,9 @@ An AI-powered interview preparation platform. Practice technical interviews, get
 
 ## Architecture
 
-```
-                        ┌─────────────┐
-                        │   Vercel    │  ← Next.js Frontend
-                        └──────┬──────┘
-                               │ HTTPS
-                        ┌──────▼──────┐
-                        │     ALB     │  ← Public entry point
-                        └──────┬──────┘
-                               │
-              ┌────────────────▼────────────────┐
-              │         Private Subnets          │
-              │   ┌──────────────────────────┐   │
-              │   │    ECS Fargate (Backend) │   │
-              │   └──────────┬───────────────┘   │
-              │              │                   │
-              │   ┌──────────▼───────────────┐   │
-              │   │        DynamoDB          │   │
-              │   └──────────────────────────┘   │
-              └─────────────────────────────────-┘
-                               │
-                        ┌──────▼──────┐
-                        │ NAT Gateway │  ← Outbound internet
-                        └─────────────┘
-```
+<p align="center">
+    <img src="screenshots/diagram.png" width="600"/>
+</p>
 
 **VPC:** `10.0.0.0/16`, Multi-AZ (`us-east-1a`, `us-east-1b`)
 
